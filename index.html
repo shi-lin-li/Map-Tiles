@@ -6,34 +6,18 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.css" />
-  <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/themes/smoothness/jquery-ui.min.css" rel="stylesheet" type="text/css"/>
-  <style type="text/css">
-    #basemapslidercontainer {
-      position: absolute;
-      top: 50px;
-      right: 10px;
-      z-index: 1000;
-    }
-
-    #basemapslider{
-      font-size:62.5%;
-      margin: 14px;
-      height: 125px;
-      width:7px;
-    }
-
-    #map{
-       width: 800px;
-       height: 600px
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+  <style>
+    html,body,#map {
+      width: 100%;
+      height: 100%;
+      padding: 0;
+      margin: 0;
     }
   </style>
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-  <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
-  <script src="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.js"></script>
-  
-  </head>
-  <body>
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+</head>
+ <body>
     <div id='map'></div>
     <script type="text/javascript">
 
@@ -63,10 +47,8 @@
       };
       
       var overlays = {
-        "Modified Basemap": tile1,
-        "Unreinfroced Masonry Buildings": tile2,
-        "Basemap and Data": tile3,
-        "Seattle Supersonics Theme": tile4
+        "Modified Basemap": tile1
+
       }
 
       L.control.layers(baseLayers, overlays, {
@@ -74,6 +56,5 @@
         position: 'topright'
       }).addTo(map);
   </script>
-
 </body>
 </html>
